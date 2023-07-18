@@ -2,13 +2,13 @@ from fastapi import FastAPI, Request, Response, HTTPException, status
 from typing import List
 import logging
 
-# Отключаем вывод INFO логов для uvicorn
+
 log = logging.getLogger('uvicorn')
 log.setLevel(logging.ERROR)
 
 app = FastAPI()
 
-players_online = ["The_MrKroll", "yoblex"]
+players_online = []
 
 
 @app.post('/update_online')
