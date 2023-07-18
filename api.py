@@ -21,9 +21,11 @@ async def update_online(request: Request):
 
     global players_online
     players_online = players
+    print("POST", players_online)
     return {"message": "Players online updated successfully"}
 
 
 @app.get('/get_online')
 async def get_online():
+    print("GET", players_online)
     return players_online
