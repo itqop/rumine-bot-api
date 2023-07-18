@@ -1,10 +1,4 @@
 from fastapi import FastAPI, Request, Response, HTTPException, status
-from typing import List
-import logging
-
-
-log = logging.getLogger('uvicorn')
-log.setLevel(logging.ERROR)
 
 app = FastAPI()
 
@@ -21,7 +15,7 @@ async def update_online(request: Request):
 
     global players_online
     players_online = players
-    print("POST", players_online)
+    print("POST", len(players_online))
     return {"message": "Players online updated successfully"}
 
 
