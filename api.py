@@ -3,7 +3,7 @@ from typing import List
 
 app = FastAPI()
 
-players_online = ["The_MrKroll", "yoblex"]
+players_online = []
 
 
 @app.post('/update_online')
