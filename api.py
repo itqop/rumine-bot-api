@@ -8,7 +8,7 @@ log.setLevel(logging.ERROR)
 
 app = FastAPI()
 
-players_online = []
+players_online = ["The_MrKroll", "yoblex"]
 
 
 @app.post('/update_online')
